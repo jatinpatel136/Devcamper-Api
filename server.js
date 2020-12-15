@@ -3,6 +3,8 @@ const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const colors = require('colors')
 const errorHandler = require('./middleware/error');
+const fileupload = require('express-fileupload');
+const path = require('path');
 
 // Load env files
 dotenv.config({ path: './config/config.env' });
@@ -17,6 +19,12 @@ const courses = require('./routes/courses');
 const app = express();
 
 app.use(express.json())
+
+// File uploading
+app.use(fileupload());
+
+// Set Static folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Mount routers
 app.use('/api/v1/bootcamps', bootcamps);

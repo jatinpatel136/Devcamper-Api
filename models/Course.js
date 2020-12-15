@@ -41,7 +41,6 @@ const CourseSchema = new mongoose.Schema({
 // check the difference between statics and method in mongoose
 // Static method to get avg of course tuitions
 CourseSchema.statics.getAverageCost = async function (bootcampId) {
-    console.log('calculating avg cost...'.blue);
 
     const obj = await this.aggregate([
         {
