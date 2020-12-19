@@ -2,6 +2,8 @@
 
 > Backend API for DevCamper application, which is a bootcamp directory website
 
+## [DevCamper Backend API Specifications](https://gist.github.com/bradtraversy/01adb248df70fb29e98c30cf659042cf)
+
 ## Usage
 
 Rename "config/config.env.env" to "config/config.env" and update the values/settings to your own
